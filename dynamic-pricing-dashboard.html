@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dynamic Pricing Dashboard — an internal hotel pricing-management platform. QA case study by Aditya Arlan Oktaviawan: pricing accuracy, scheduling, access control, bulk operations, and downstream price distribution." />
+  <meta name="author" content="Aditya Arlan Oktaviawan" />
+  <meta name="theme-color" content="#F6F8FB" />
+
+  <!-- EDIT: replace with your real Vercel domain once deployed -->
+  <link rel="canonical" href="https://adityaarlan-qa.vercel.app/dynamic-pricing-dashboard.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <title>Dynamic Pricing Dashboard &mdash; Aditya Arlan Oktaviawan</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dynamic Pricing Dashboard &mdash; Aditya Arlan Oktaviawan" />
+  <meta property="og:description" content="QA case study — internal hotel pricing-management platform covering pricing accuracy, scheduling, access control, and downstream price distribution." />
+  <meta property="og:url" content="https://adityaarlan-qa.vercel.app/dynamic-pricing-dashboard.html" />
+  <meta property="og:site_name" content="Aditya Arlan Oktaviawan" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Dynamic Pricing Dashboard &mdash; Aditya Arlan Oktaviawan" />
+  <meta name="twitter:description" content="QA case study — internal hotel pricing-management platform covering pricing accuracy, scheduling, access control, and downstream price distribution." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         DYNAMIC PRICING DASHBOARD — project case study
+
+         Structure: Overview → My Role → Key Test Scenarios → Bug Case Study
+
+         EDIT: replace any [BRACKETED] placeholder or boxed placeholder
+         before publishing. Everything in plain text is the published
+         framing; everything flagged [EDIT] / [ADD] / [CONFIRM] is yours
+         to review first.
+         ============================================================ -->
+    <section class="section-head">
+      <div class="wrap">
+        <p class="breadcrumb mono"><a href="index.html#projects">&larr; Projects</a></p>
+        <span class="sec-num mono">&mdash; P-002</span>
+        <h1>Dynamic Pricing Dashboard</h1>
+        <p class="section-head-sub">Internal hotel pricing-management platform &mdash; QA case study covering pricing accuracy, scheduling, access control, bulk operations, and downstream price distribution.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         01 · OVERVIEW
+         ============================================================ -->
+    <section id="overview">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">01</span><h2>Overview</h2></div>
+        <div class="about-grid">
+          <p>
+            Dynamic Pricing Dashboard is an internal hotel pricing and revenue-management
+            platform covering property pricing configuration, room-category pricing,
+            occupancy-based pricing, minimum and maximum pricing boundaries, fixed and
+            dynamic pricing configurations, percentage-based price adjustments, scheduled
+            pricing changes, room-plan configuration, final selling-price calculation,
+            bulk operations, user permissions, pricing history, and external price
+            distribution &mdash; across development, staging, and production environments.
+          </p>
+          <div class="about-fact-box" role="note">
+            <p class="mono">ENVIRONMENTS</p>
+            <ul class="about-facts">
+              <li>Development</li>
+              <li>Staging</li>
+              <li>Production</li>
+            </ul>
+            <p class="mono">PLATFORMS</p>
+            <ul class="about-facts">
+              <li>Web</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 · MY ROLE
+         ============================================================ -->
+    <section id="my-role">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">02</span><h2>My Role</h2></div>
+        <div class="about-grid">
+          <p>
+            Responsible for quality ownership of pricing-critical workflows &mdash; validating
+            that pricing calculations, schedules, access control, and downstream distribution
+            behave as intended. A pricing defect here carries direct business and revenue
+            impact, so testing prioritised accuracy, scope, and data integrity before
+            anything else.
+            <br><br>
+            Testing covered functional, regression, exploratory, and integration testing,
+            API validation, boundary-value and decision-table analysis, role and access
+            testing, data-integrity validation, defect investigation, fix verification, and
+            release validation &mdash; collaborating with developers and product stakeholders
+            across the development, staging, and production environments.
+          </p>
+          <div class="stat-row">
+            <div class="stat">
+              <div class="num">Flow</div>
+              <div class="label">Property Setup &rarr; Price Configuration &rarr; Schedule &rarr; Final Price &rarr; Distribution</div>
+            </div>
+            <div class="stat">
+              <div class="num">3</div>
+              <div class="label">Environments covered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 · KEY TEST SCENARIOS
+         ============================================================ -->
+    <section id="scenarios">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">03</span><h2>Key Test Scenarios</h2></div>
+        <p class="sec-sub">A sample of scenario-based testing across pricing configuration, scheduling, access control, bulk operations, and external distribution &mdash; prioritised by potential business and revenue impact.</p>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Scenario</th>
+                <th scope="col">Expected Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="mono">1</td><td>User configures minimum and maximum pricing boundaries</td><td>Configuration is accepted only if pricing values satisfy valid boundaries and relationships</td></tr>
+              <tr><td class="mono">2</td><td>User configures a price adjustment for selected dates and weekdays</td><td>Adjustment applies only to the intended dates, room categories, occupancy levels, and conditions</td></tr>
+              <tr><td class="mono">3</td><td>User applies a percentage-based price increase or discount</td><td>Final selling price is calculated correctly and remains consistent between UI and backend data</td></tr>
+              <tr><td class="mono">4</td><td>Pricing differs depending on guest occupancy level</td><td>Each supported occupancy receives the correct price without affecting unrelated configurations</td></tr>
+              <tr><td class="mono">5</td><td>Restricted user attempts to modify pricing outside their assigned property scope</td><td>Access is denied and no pricing data is changed</td></tr>
+              <tr><td class="mono">6</td><td>Bulk upload contains a mix of valid and invalid records</td><td>Valid records are processed correctly, failures are clearly reported, and unrelated records remain unaffected</td></tr>
+              <tr><td class="mono">7</td><td>Price publishing to an external system is enabled</td><td>A valid destination/configuration is required before pricing can be distributed externally</td></tr>
+              <tr><td class="mono">8</td><td>User modifies a pricing configuration successfully</td><td>Updated configuration is reflected correctly and remains traceable through pricing history or audit information</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- [CONFIRM] Sanitised, generic wording only — no internal system
+             names, exact thresholds, property/room IDs, or vendor names. Swap
+             in your real expectation wording if any differ. -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 · BUG CASE STUDY
+         ============================================================ -->
+    <section id="bug-case">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">04</span><h2>Bug Case Study</h2></div>
+        <p class="sec-sub">Two examples of defect investigation on an internal pricing platform &mdash; identifying not just that something broke, but where the enforcement gap was.</p>
+
+        <!-- [EDIT] These are placeholders, not fabricated bugs. Replace both
+             examples below with bugs you personally found. Keep the same
+             Problem / QA Challenge / Investigation / Outcome structure. -->
+
+        <article class="bug-case">
+          <div class="bug-case-head">
+            <span class="mono">Case Study 01</span>
+            <h3>Pricing Schedule Applied Outside Intended Conditions</h3>
+          </div>
+          <div class="tbl-wrap">
+            <table class="tbl tbl-plain">
+              <tbody>
+                <tr>
+                  <th scope="row">Problem</th>
+                  <td>A scheduled pricing adjustment produces an unexpected selling price for a specific combination of date, room category, occupancy, or configuration.</td>
+                </tr>
+                <tr>
+                  <th scope="row">QA Challenge</th>
+                  <td>Verify that pricing rules affect only their intended scope and do not modify unrelated dates, rooms, occupancy levels, or properties.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Investigation</th>
+                  <td>Trace the calculation through each stage to locate where behavior diverges from the expected pricing rule:
+                    <span class="inline-flow">Pricing Configuration &rarr; Request / Submitted Data &rarr; Backend Response &rarr; Pricing Schedule &rarr; Final Selling Price</span>.
+                    QA compares the expected and actual result at every stage to narrow down the responsible layer.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Outcome</th>
+                  <td>The responsible layer is identified and the fix is verified against the original scenario plus surrounding boundary and regression cases.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="bug-case">
+          <div class="bug-case-head">
+            <span class="mono">Case Study 02</span>
+            <h3>Access Control / Data Scope Validation</h3>
+          </div>
+          <div class="tbl-wrap">
+            <table class="tbl tbl-plain">
+              <tbody>
+                <tr>
+                  <th scope="row">Problem</th>
+                  <td>A user with restricted access appears able to reach or perform an operation outside their expected property or permission scope.</td>
+                </tr>
+                <tr>
+                  <th scope="row">QA Challenge</th>
+                  <td>Verify authorization beyond simple UI visibility &mdash; the restriction must hold at the request and data level, not only on screen.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Investigation</th>
+                  <td>Test across: normal UI navigation, direct page access, restricted operations, different permission levels, different property assignments, and backend authorization behavior.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Outcome</th>
+                  <td>QA ensures access restrictions are consistently enforced both in the user interface and at the request/backend level.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- [EDIT] This page mirrors the Direct Channel case study structure.
+             The two case studies above are intentionally generic so the
+             portfolio says nothing inaccurate. Replace them with your own
+             real findings before publishing. -->
+      </div>
+    </section>
+
+    </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> Aditya Arlan Oktaviawan &mdash; Quality is not an act, it is a habit.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

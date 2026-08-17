@@ -407,12 +407,11 @@ header {
   .case-grid { grid-template-columns: 1fr; }
 }
 
-/* Home-page Projects section: with only a few cards, don't stretch them
-   across the full 2-column grid — cap the container so a single card
-   reads as an intentional feature card instead of a half-empty row. */
+/* Home-page Projects section: two-up grid so cards read P001/P002 on the
+   first row and P003/P004 on the second. */
 #projects .case-grid {
-  grid-template-columns: 1fr;
-  max-width: 560px;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 840px;
 }
 
 .case {
@@ -667,6 +666,18 @@ header {
 @media (max-width: 760px) {
   .bug-case .tbl th[scope="row"] { width: 92px; padding: 11px 16px; }
   .bug-case .tbl th, .bug-case .tbl td { padding: 11px 16px; }
+}
+.inline-flow {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  color: var(--ink);
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  margin-top: 8px;
+  line-height: 1.7;
 }
 .bug-tags { padding: 4px 22px 20px; }
 .bug-close {

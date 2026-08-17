@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="User Management System — internal user and access-management platform. QA case study by Aditya Arlan Oktaviawan: user lifecycle, permissions, property-level access, authentication, and connected-product authorization." />
+  <meta name="author" content="Aditya Arlan Oktaviawan" />
+  <meta name="theme-color" content="#F6F8FB" />
+
+  <!-- EDIT: replace with your real Vercel domain once deployed -->
+  <link rel="canonical" href="https://adityaarlan-qa.vercel.app/identity-access-management.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <title>User Management System &mdash; Aditya Arlan Oktaviawan</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="User Management System &mdash; Aditya Arlan Oktaviawan" />
+  <meta property="og:description" content="QA case study — internal user and access-management platform covering user lifecycle, permissions, property-level access, authentication, and connected-product authorization." />
+  <meta property="og:url" content="https://adityaarlan-qa.vercel.app/identity-access-management.html" />
+  <meta property="og:site_name" content="Aditya Arlan Oktaviawan" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="User Management System &mdash; Aditya Arlan Oktaviawan" />
+  <meta name="twitter:description" content="QA case study — internal user and access-management platform covering user lifecycle, permissions, property-level access, authentication, and connected-product authorization." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         IDENTITY & ACCESS MANAGEMENT PLATFORM — project case study
+
+         Structure: Overview → My Role → Key Test Scenarios → Bug Case Study
+
+         EDIT: replace any [BRACKETED] placeholder or boxed placeholder
+         before publishing. Everything in plain text is the published
+         framing; everything flagged [EDIT] / [ADD] / [CONFIRM] is yours
+         to review first.
+         ============================================================ -->
+    <section class="section-head">
+      <div class="wrap">
+        <p class="breadcrumb mono"><a href="index.html#projects">&larr; Projects</a></p>
+        <span class="sec-num mono">&mdash; P-004</span>
+        <h1>User Management System</h1>
+        <p class="section-head-sub">Internal user and access-management platform &mdash; QA case study covering user lifecycle, permissions, property-level access, authentication, and connected-product authorization.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         01 · OVERVIEW
+         ============================================================ -->
+    <section id="overview">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">01</span><h2>Overview</h2></div>
+        <div class="about-grid">
+          <p>
+            A centralized platform used to manage internal users and control their
+            access across multiple business applications.
+            <br><br>
+            The system supports user creation, read/write permissions,
+            property-level access, account activation/deactivation, credential
+            reset, user search, and access to connected products. My role focused
+            on validating that users received only the access they were authorized
+            to have, while lifecycle and permission changes remained consistent
+            across connected systems.
+          </p>
+          <div class="about-fact-box" role="note">
+            <p class="mono">ENVIRONMENTS</p>
+            <ul class="about-facts">
+              <li>Development</li>
+              <li>Staging</li>
+              <li>Production</li>
+            </ul>
+            <p class="mono">PLATFORM</p>
+            <ul class="about-facts">
+              <li>Web</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 · MY ROLE
+         ============================================================ -->
+    <section id="my-role">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">02</span><h2>My Role</h2></div>
+        <div class="about-grid">
+          <p>
+            Responsible for validating user lifecycle and authorization workflows
+            &mdash; including account creation, permission assignment, property
+            access, authentication, account status changes, and cross-product
+            access.
+            <br><br>
+            Performed functional, regression, exploratory, authorization,
+            API/UI consistency, and negative testing while collaborating with
+            developers to investigate and verify access-related defects.
+          </p>
+          <div class="stat-row">
+            <div class="stat">
+              <div class="num">Flow</div>
+              <div class="label">Create User &rarr; Assign Permissions &rarr; Assign Properties &rarr; Activate &rarr; Access Products</div>
+            </div>
+            <div class="stat">
+              <div class="num">3</div>
+              <div class="label">Environments covered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 · KEY TEST SCENARIOS
+         ============================================================ -->
+    <section id="scenarios">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">03</span><h2>Key Test Scenarios</h2></div>
+        <p class="sec-sub">A sample of scenario-based testing across user lifecycle, permission assignment, property-level access, authentication, and connected-product authorization &mdash; prioritised by the risk of unauthorized access and inconsistent permission state.</p>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Scenario</th>
+                <th scope="col">Expected Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="mono">1</td><td>Administrator creates a new user with permissions and property access</td><td>User is created with the correct access configuration</td></tr>
+              <tr><td class="mono">2</td><td>User receives read/write permissions for selected features</td><td>Only authorized actions and products become accessible</td></tr>
+              <tr><td class="mono">3</td><td>User is assigned access to selected properties</td><td>User cannot access properties outside the assigned scope</td></tr>
+              <tr><td class="mono">4</td><td>Restricted administrator views the user list</td><td>Only users within the administrator's authorized scope are available</td></tr>
+              <tr><td class="mono">5</td><td>Unauthorized user attempts to edit another user's access</td><td>Modification is blocked</td></tr>
+              <tr><td class="mono">6</td><td>Active account is deactivated</td><td>User access is disabled without affecting unrelated accounts</td></tr>
+              <tr><td class="mono">7</td><td>Account is reactivated or credentials are reset</td><td>User can continue through the correct authentication lifecycle</td></tr>
+              <tr><td class="mono">8</td><td>User opens the application launchpad</td><td>Accessible products are enabled while unauthorized products remain unavailable</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- [CONFIRM] Sanitised, generic wording only — no internal system
+             names, product names, property IDs, or role names. Swap in
+             your real expectation wording if any differ. -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 · BUG CASE STUDY
+         ============================================================ -->
+    <section id="bug-case">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">04</span><h2>Bug Case Study</h2></div>
+        <p class="sec-sub">Two examples of defect investigation on an identity and access-management platform &mdash; identifying not just that an access issue occurred, but where authorization became inconsistent.</p>
+
+        <!-- [EDIT] These are placeholders, not fabricated bugs. Replace both
+             examples below with bugs you personally found. Keep the same
+             Problem / QA Challenge / Investigation / Outcome structure. -->
+
+        <article class="bug-case">
+          <div class="bug-case-head">
+            <span class="mono">Case Study 01</span>
+            <h3>Permission &amp; Product Access Consistency</h3>
+          </div>
+          <div class="tbl-wrap">
+            <table class="tbl tbl-plain">
+              <tbody>
+                <tr>
+                  <th scope="row">Problem</th>
+                  <td>A permission change causes inconsistent access between the user's configuration and a connected application.</td>
+                </tr>
+                <tr>
+                  <th scope="row">QA Challenge</th>
+                  <td>Ensure updated permissions are correctly reflected across both the management platform and connected products.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Investigation</th>
+                  <td>Trace authorization through each stage to locate where the permission change stops being honored:
+                    <span class="inline-flow">Permission Configuration &rarr; API Response &rarr; User Session &rarr; Product Access &rarr; Allowed Actions</span>.
+                    QA compares the expected and actual access at every stage to identify where authorization becomes inconsistent.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Outcome</th>
+                  <td>The responsible layer is identified and the fix is verified against the original scenario, related permission combinations, and regression cases.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="bug-case">
+          <div class="bug-case-head">
+            <span class="mono">Case Study 02</span>
+            <h3>Property Access Scope</h3>
+          </div>
+          <div class="tbl-wrap">
+            <table class="tbl tbl-plain">
+              <tbody>
+                <tr>
+                  <th scope="row">Problem</th>
+                  <td>A restricted user or administrator can access user or property information outside their assigned scope.</td>
+                </tr>
+                <tr>
+                  <th scope="row">QA Challenge</th>
+                  <td>Validate that property restrictions are enforced beyond simple UI visibility &mdash; the restriction must hold at the request and data level, not only on screen.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Investigation</th>
+                  <td>Test across: different property assignments, user roles, direct page access, API behavior, and user-list visibility, comparing expected versus actual authorization behavior.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Outcome</th>
+                  <td>Unauthorized data and operations remain inaccessible at both the UI and backend levels, and the fix is verified across related access combinations.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- [EDIT] This page mirrors the Direct Channel, Dynamic Pricing
+             Dashboard, and Review Management case study structure. The two
+             case studies above are intentionally generic so the portfolio
+             says nothing inaccurate. Replace them with your own real findings
+             before publishing. -->
+      </div>
+    </section>
+
+    </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> Aditya Arlan Oktaviawan &mdash; Quality is not an act, it is a habit.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

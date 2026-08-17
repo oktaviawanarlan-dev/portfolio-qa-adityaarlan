@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Review Management — a hotel review-management platform. QA case study by Aditya Arlan Oktaviawan: AI-assisted replies, moderation workflows, analytics, access control, and external review-platform integrations." />
+  <meta name="author" content="Aditya Arlan Oktaviawan" />
+  <meta name="theme-color" content="#F6F8FB" />
+
+  <!-- EDIT: replace with your real Vercel domain once deployed -->
+  <link rel="canonical" href="https://adityaarlan-qa.vercel.app/review-management.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <title>Review Management &mdash; Aditya Arlan Oktaviawan</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Review Management &mdash; Aditya Arlan Oktaviawan" />
+  <meta property="og:description" content="QA case study — AI-powered hotel review-management platform covering review moderation, analytics, access control, and external review-platform integrations." />
+  <meta property="og:url" content="https://adityaarlan-qa.vercel.app/review-management.html" />
+  <meta property="og:site_name" content="Aditya Arlan Oktaviawan" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Review Management &mdash; Aditya Arlan Oktaviawan" />
+  <meta name="twitter:description" content="QA case study — AI-powered hotel review-management platform covering review moderation, analytics, access control, and external review-platform integrations." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         REVIEW MANAGEMENT — project case study
+
+         Structure: Overview → My Role → Key Test Scenarios → Bug Case Study
+
+         EDIT: replace any [BRACKETED] placeholder or boxed placeholder
+         before publishing. Everything in plain text is the published
+         framing; everything flagged [EDIT] / [ADD] / [CONFIRM] is yours
+         to review first.
+         ============================================================ -->
+    <section class="section-head">
+      <div class="wrap">
+        <p class="breadcrumb mono"><a href="index.html#projects">&larr; Projects</a></p>
+        <span class="sec-num mono">&mdash; P-003</span>
+        <h1>Review Management</h1>
+        <p class="section-head-sub">Hotel review-management platform &mdash; QA case study covering AI-assisted replies, moderation workflows, analytics, access control, and external review-platform integrations.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         01 · OVERVIEW
+         ============================================================ -->
+    <section id="overview">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">01</span><h2>Overview</h2></div>
+        <div class="about-grid">
+          <p>
+            An AI-powered review-management platform that centralizes guest reviews from
+            multiple external channels, analyzes review sentiment, generates suggested
+            responses, and enables users to review, edit, approve, or discard replies
+            before publication.
+            <br><br>
+            The platform also provides review analytics, property settings,
+            notification and response rules, external channel connections, bulk
+            operations, and event history. My role was quality ownership across the
+            review lifecycle &mdash; validating not only AI-assisted functionality,
+            but also workflow consistency, permissions, integrations, and data accuracy.
+          </p>
+          <div class="about-fact-box" role="note">
+            <p class="mono">ENVIRONMENTS</p>
+            <ul class="about-facts">
+              <li>Development</li>
+              <li>Staging</li>
+              <li>Production</li>
+            </ul>
+            <p class="mono">PLATFORMS</p>
+            <ul class="about-facts">
+              <li>Web</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 · MY ROLE
+         ============================================================ -->
+    <section id="my-role">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">02</span><h2>My Role</h2></div>
+        <div class="about-grid">
+          <p>
+            Responsible for validating the reliability of the end-to-end
+            review-management workflow &mdash; from review collection and AI-generated
+            responses through human moderation, publication, analytics, and audit
+            history.
+            <br><br>
+            Collaborated with developers and product stakeholders to identify risks,
+            design test scenarios, investigate defects, validate permissions and
+            integrations, perform regression testing, and verify releases.
+          </p>
+          <div class="stat-row">
+            <div class="stat">
+              <div class="num">Flow</div>
+              <div class="label">Review &rarr; AI analysis &rarr; Reply &rarr; Approve &rarr; Publish</div>
+            </div>
+            <div class="stat">
+              <div class="num">3</div>
+              <div class="label">Environments covered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 · KEY TEST SCENARIOS
+         ============================================================ -->
+    <section id="scenarios">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">03</span><h2>Key Test Scenarios</h2></div>
+        <p class="sec-sub">A sample of scenario-based testing across review collection, AI-assisted replies, moderation, analytics, access control, and external integrations &mdash; prioritised by potential business and guest-experience impact.</p>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Scenario</th>
+                <th scope="col">Expected Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="mono">1</td><td>New guest review is collected from an external review platform</td><td>Review appears with accurate rating, comment, property, and source information</td></tr>
+              <tr><td class="mono">2</td><td>AI generates a suggested reply for an unanswered review</td><td>Suggested response is associated with the correct review and available for moderation</td></tr>
+              <tr><td class="mono">3</td><td>User edits and approves an AI-generated reply</td><td>Edited content is saved and the review status updates correctly</td></tr>
+              <tr><td class="mono">4</td><td>User approves multiple replies using a bulk action</td><td>Selected reviews are processed correctly without affecting unselected reviews</td></tr>
+              <tr><td class="mono">5</td><td>User marks a review as not requiring a response</td><td>Review moves to the correct state and no longer appears as unanswered</td></tr>
+              <tr><td class="mono">6</td><td>User filters reviews by sentiment or source</td><td>Only reviews matching the selected filters are displayed</td></tr>
+              <tr><td class="mono">7</td><td>User without modification permission attempts to edit or approve a reply</td><td>Action remains unavailable and restricted operations cannot be performed</td></tr>
+              <tr><td class="mono">8</td><td>External review-platform connection fails or becomes invalid</td><td>Clear connection status/error is shown without corrupting existing review data</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- [CONFIRM] Sanitised, generic wording only — no internal system
+             names, external channel/vendor names, or property IDs. Swap in
+             your real expectation wording if any differ. -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 · BUG CASE STUDY
+         ============================================================ -->
+    <section id="bug-case">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">04</span><h2>Bug Case Study</h2></div>
+        <p class="sec-sub">Two examples of defect investigation on a review-management platform &mdash; identifying not just that something broke, but where the workflow or authorization gap was.</p>
+
+        <!-- [EDIT] These are placeholders, not fabricated bugs. Replace both
+             examples below with bugs you personally found. Keep the same
+             Problem / QA Challenge / Investigation / Outcome structure. -->
+
+        <article class="bug-case">
+          <div class="bug-case-head">
+            <span class="mono">Case Study 01</span>
+            <h3>Review Workflow State Consistency</h3>
+          </div>
+          <div class="tbl-wrap">
+            <table class="tbl tbl-plain">
+              <tbody>
+                <tr>
+                  <th scope="row">Problem</th>
+                  <td>A review action caused inconsistent status or UI behavior between the review list, unanswered count, and related workflow state.</td>
+                </tr>
+                <tr>
+                  <th scope="row">QA Challenge</th>
+                  <td>Validate that actions such as edit, approve, delete, discard, and bulk approval update all related views consistently.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Investigation</th>
+                  <td>Compared the review state before and after the action across the UI, backend response, filters, counters, and event history.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Outcome</th>
+                  <td>Identified the workflow consistency gap and verified the corrected state across the original scenario and related regression cases.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="bug-case">
+          <div class="bug-case-head">
+            <span class="mono">Case Study 02</span>
+            <h3>Permission Enforcement Gap</h3>
+          </div>
+          <div class="tbl-wrap">
+            <table class="tbl tbl-plain">
+              <tbody>
+                <tr>
+                  <th scope="row">Problem</th>
+                  <td>A restricted account could reach an action or page that should not be available for its permission level or property status.</td>
+                </tr>
+                <tr>
+                  <th scope="row">QA Challenge</th>
+                  <td>Verify that restrictions are enforced beyond simple UI visibility.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Investigation</th>
+                  <td>Tested different permission levels, account states, direct-page access, and review actions to compare expected versus actual authorization behavior.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Outcome</th>
+                  <td>Flagged the access-control gap and verified consistent enforcement across navigation, controls, and protected actions.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- [EDIT] This page mirrors the Direct Channel and Dynamic Pricing
+             case study structure. The two case studies above are intentionally
+             generic so the portfolio says nothing inaccurate. Replace them with
+             your own real findings before publishing. -->
+      </div>
+    </section>
+
+    </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> Aditya Arlan Oktaviawan &mdash; Quality is not an act, it is a habit.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
