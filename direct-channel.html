@@ -111,13 +111,19 @@
       <div class="wrap">
         <div class="sec-head"><span class="sec-num mono">02</span><h2>My Role</h2></div>
         <div class="about-grid">
-          <p>
+          <div>
+            <p>
             Responsible for validating the reliability of the end-to-end hotel booking
             experience, from search through payment, confirmation, and cancellation &mdash;
             collaborating with developers and product stakeholders to identify risk,
             design test scenarios, investigate defects, and verify releases across dev,
             staging, and production.
-          </p>
+            <br><br>
+            Testing was supported by Qase.io for test case management, JIRA for defect and
+            release tracking, Postman for API validation, DBeaver for database verification,
+            and AWS CloudWatch alongside Datadog for log-based investigation of live issues.
+            </p>
+            </div>
           <div class="stat-row">
             <div class="stat">
               <div class="num">Flow</div>
@@ -139,6 +145,8 @@
       <div class="wrap">
         <div class="sec-head"><span class="sec-num mono">03</span><h2>Key Test Scenarios</h2></div>
         <p class="sec-sub">A sample of scenario-based testing across the booking creation and cancellation flows, covering happy paths, conditional business logic, and cross-system consistency.</p>
+        <p class="sec-tools-label mono">Tools used in this section</p>
+        <div class="tag-list sec-tools"><span class="tag">Qase.io (test case design)</span><span class="tag">Postman (API validation)</span></div>
         <div class="tbl-wrap">
           <table class="tbl">
             <thead>
@@ -173,6 +181,9 @@
       <div class="wrap">
         <div class="sec-head"><span class="sec-num mono">04</span><h2>Bug Case Study</h2></div>
         <p class="sec-sub">Two examples of defect investigation from testing a customer-facing booking platform &mdash; identifying not just that something broke, but where the enforcement gap or missing requirement was.</p>
+
+        <p class="sec-tools-label mono">Tools used in this section</p>
+        <div class="tag-list sec-tools"><span class="tag">JIRA (defect tracking)</span><span class="tag">AWS CloudWatch + Datadog (log investigation)</span><span class="tag">DBeaver (data verification)</span></div>
 
         <article class="bug-case">
           <div class="bug-case-head">
