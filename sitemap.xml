@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- EDIT: replace with your real Vercel domain once deployed -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://adityaarlan-qa.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://adityaarlan-qa.vercel.app/direct-channel.html</loc>
+  </url>
+</urlset>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# EDIT: replace with your real Vercel domain once deployed
+Sitemap: https://adityaarlan-qa.vercel.app/sitemap.xml

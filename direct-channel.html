@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Direct Channel — a customer-facing hotel booking platform. QA case study by Aditya Arlan Oktaviawan: approach, risk-based testing, key scenarios, bug case study, and impact." />
+  <meta name="author" content="Aditya Arlan Oktaviawan" />
+  <meta name="theme-color" content="#F6F8FB" />
+
+  <!-- EDIT: replace with your real Vercel domain once deployed -->
+  <link rel="canonical" href="https://adityaarlan-qa.vercel.app/direct-channel.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <title>Tabist Direct Channel &mdash; Aditya Arlan Oktaviawan</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tabist Direct Channel &mdash; Aditya Arlan Oktaviawan" />
+  <meta property="og:description" content="QA case study — how Aditya Arlan validated the end-to-end hotel booking experience." />
+  <meta property="og:url" content="https://adityaarlan-qa.vercel.app/direct-channel.html" />
+  <meta property="og:site_name" content="Aditya Arlan Oktaviawan" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tabist Direct Channel &mdash; Aditya Arlan Oktaviawan" />
+  <meta name="twitter:description" content="QA case study — how Aditya Arlan validated the end-to-end hotel booking experience." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         TABIST DIRECT CHANNEL — project case study
+
+         Structure: Overview → My Role → Key Test Scenarios → Bug Case Study
+
+         EDIT: replace any [BRACKETED] placeholder or boxed placeholder
+         before publishing. Everything in plain text is the published
+         framing; everything flagged [EDIT] / [ADD] / [CONFIRM] is yours
+         to review first.
+         ============================================================ -->
+    <section class="section-head">
+      <div class="wrap">
+        <p class="breadcrumb mono"><a href="index.html#projects">&larr; Projects</a></p>
+        <span class="sec-num mono">&mdash; P-001</span>
+        <h1>Tabist Direct Channel</h1>
+        <p class="section-head-sub">Customer-facing hotel booking platform &mdash; QA case study covering the end-to-end booking journey.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         01 · OVERVIEW
+         ============================================================ -->
+    <section id="overview">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">01</span><h2>Overview</h2></div>
+        <div class="about-grid">
+          <p>
+            Direct Channel is a customer-facing hotel booking platform covering search,
+            room/plan selection, pricing and promotions, payment, booking confirmation,
+            and cancellation, across development, staging, and production environments.
+            <br><br>
+            My role was quality ownership for this product &mdash; testing not just "pages"
+            but the reliability of the entire booking experience end-to-end.
+          </p>
+          <div class="about-fact-box" role="note">
+            <p class="mono">ENVIRONMENTS</p>
+            <ul class="about-facts">
+              <li>Development</li>
+              <li>Staging</li>
+              <li>Production</li>
+            </ul>
+            <p class="mono">PLATFORMS</p>
+            <ul class="about-facts">
+              <li>Web &mdash; desktop + mobile</li>
+            </ul>
+          </div>
+        </div>
+        <!-- [CONFIRM] The brief asks whether mentioning the underlying
+             architecture (BFF / CMS) is okay to publish. It has NOT been
+             included here. If you confirm it's fine, add a sentence such as
+             "the front end integrates with the platform through a BFF layer
+             and content is managed via a CMS." -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 · MY ROLE
+         ============================================================ -->
+    <section id="my-role">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">02</span><h2>My Role</h2></div>
+        <div class="about-grid">
+          <p>
+            Responsible for validating the reliability of the end-to-end hotel booking
+            experience, from search through payment, confirmation, and cancellation &mdash;
+            collaborating with developers and product stakeholders to identify risk,
+            design test scenarios, investigate defects, and verify releases across dev,
+            staging, and production.
+          </p>
+          <div class="stat-row">
+            <div class="stat">
+              <div class="num">Flow</div>
+              <div class="label">Search &rarr; payment &rarr; manage</div>
+            </div>
+            <div class="stat">
+              <div class="num">3</div>
+              <div class="label">Environments covered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 · KEY TEST SCENARIOS
+         ============================================================ -->
+    <section id="scenarios">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">03</span><h2>Key Test Scenarios</h2></div>
+        <p class="sec-sub">A sample of scenario-based testing across the booking creation and cancellation flows, covering happy paths, conditional business logic, and cross-system consistency.</p>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Scenario</th>
+                <th scope="col">Expected Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="mono">1</td><td>Guest completes a booking using a digital wallet payment method</td><td>Booking and payment complete successfully; confirmation displayed with correct booking reference</td></tr>
+              <tr><td class="mono">2</td><td>Guest completes a booking using "pay at hotel" (no upfront charge)</td><td>Booking confirmed without payment collection; no receipt generated at booking time</td></tr>
+              <tr><td class="mono">3</td><td>Guest attempts to proceed to payment without accepting terms/privacy consent</td><td>Payment step remains blocked until consent checkbox is confirmed</td></tr>
+              <tr><td class="mono">4</td><td>Guest completes payment and a bot-verification challenge appears</td><td>Guest must pass verification before payment page loads; booking proceeds only after successful verification</td></tr>
+              <tr><td class="mono">5</td><td>Room availability changes between selection and final payment</td><td>System reflects current availability accurately before allowing booking to complete</td></tr>
+              <tr><td class="mono">6</td><td>Guest initiates cancellation without being logged in</td><td>Guest authenticates via booking reference + one-time code sent to their email before cancellation is allowed</td></tr>
+              <tr><td class="mono">7</td><td>Booking is successfully created</td><td>Room inventory count updates to reflect the new booking; guest receives confirmation email with accurate booking details</td></tr>
+              <tr><td class="mono">8</td><td>Booking is successfully cancelled</td><td>Room inventory count reverts to reflect the cancellation; guest receives a cancellation confirmation email</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- [CONFIRM] This is sanitised, generic wording only — no internal
+             system names, exact UI copy, fee amounts, or payment-provider
+             names. Swap in your real expectation wording if any differ. -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 · BUG CASE STUDY
+         ============================================================ -->
+    <section id="bug-case">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num mono">04</span><h2>Bug Case Study</h2></div>
+        <p class="sec-sub">Two examples of defect investigation from testing a customer-facing booking platform &mdash; identifying not just that something broke, but where the enforcement gap or missing requirement was.</p>
+
+        <article class="bug-case">
+          <div class="bug-case-head">
+            <span class="mono">Case Study 01</span>
+            <h3>Payment Method Availability Validation Gap</h3>
+          </div>
+          <div class="tbl-wrap">
+            <table class="tbl tbl-plain">
+              <tbody>
+                <tr>
+                  <th scope="row">Problem</th>
+                  <td>When a payment method's availability status changed on the backend (e.g. set to "maintenance" or "unavailable"), the customer-facing behavior didn't consistently reflect that status across different payment methods.</td>
+                </tr>
+                <tr>
+                  <th scope="row">QA Challenge</th>
+                  <td>Verify that "unavailable" and "maintenance" states are enforced consistently &mdash; both visually (UI disabled with a message) and functionally (booking creation blocked) &mdash; regardless of which payment method is affected.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Investigation</th>
+                  <td>For one payment method, the UI correctly greyed out the option under "maintenance" status, but still allowed selection and successful booking under "unavailable" status. For a second payment method, the UI didn't grey out or message the user under either status, and bookings could be completed in both cases.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Outcome</th>
+                  <td>Flagged that unavailable/maintenance states needed identical enforcement across all payment methods &mdash; blocking selection on the frontend, plus a backend validation preventing booking creation, modification, or cancellation during the affected window.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="bug-case">
+          <div class="bug-case-head">
+            <span class="mono">Case Study 02</span>
+            <h3>Verification Link Behavior After Account Switch</h3>
+          </div>
+          <div class="tbl-wrap">
+            <table class="tbl tbl-plain">
+              <tbody>
+                <tr>
+                  <th scope="row">Problem</th>
+                  <td>A verification link sent during an email-update flow led to a blank page under a specific multi-account sequence.</td>
+                </tr>
+                <tr>
+                  <th scope="row">QA Challenge</th>
+                  <td>Validate link behavior beyond the simple case &mdash; under realistic scenarios where a user switches accounts before completing verification.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Steps</th>
+                  <td>User logs in with Account A, updates email to a new address, logs out, logs into a different Account C, then opens the updated inbox and clicks the original verification link. Result: the link directed to an empty page &mdash; the flow only had defined behavior for "not logged in" and "logged in as the original user," not "logged in as a different account."</td>
+                </tr>
+                <tr>
+                  <th scope="row">Outcome</th>
+                  <td>Flagged as an undefined edge case for product/engineering to define, rather than assuming a fix &mdash; since expected behavior hadn't been specified.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- [EDIT] Content is sanitised and generic as requested — no ticket
+             IDs, internal tool/system names, interface copy, or company name.
+             Adjust the wording if any detail differs from what you want
+             published. -->
+      </div>
+    </section>
+
+    </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> Aditya Arlan Oktaviawan &mdash; Quality is not an act, it is a habit.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
